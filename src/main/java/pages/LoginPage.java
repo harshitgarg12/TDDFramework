@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import helper.Utility;
+
 public class LoginPage {
 
 	WebDriver driver;
@@ -21,5 +23,6 @@ public class LoginPage {
 		driver.findElement(email).sendKeys(uId);
 		driver.findElement(password).sendKeys(pass);
 		driver.findElement(button).click();
-	}
+		Utility.waitForSeconds(2);
+			}
 }

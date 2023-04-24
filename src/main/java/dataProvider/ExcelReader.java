@@ -66,7 +66,7 @@ public class ExcelReader {
 			}
 			else if(cell.getCellType()==CellType.NUMERIC)
 			{
-				Double data=cell.getNumericCellValue();
+				int data=(int) cell.getNumericCellValue();
 				value=String.valueOf(data);
 			}
 			

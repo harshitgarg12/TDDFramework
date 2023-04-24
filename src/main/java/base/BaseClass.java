@@ -1,8 +1,8 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import browserFactory.BrowserFactory;
 import dataProvider.ConfigReader;
@@ -17,7 +17,7 @@ public class BaseClass {
 		}
 		
 		
-	 @BeforeMethod
+	 @BeforeClass
 	public void setUpBrowser()
 	{
 		System.out.println("LOG INFO:- ******************Setting up the Browser***************");
@@ -25,7 +25,7 @@ public class BaseClass {
 		System.out.println("LOG INFO:- *****************Application is up and running*******************");
 	}
 	 
-	 @AfterMethod
+	 @AfterClass
 	 public void closeBrowser()
 	 {
 		 driver.quit();
