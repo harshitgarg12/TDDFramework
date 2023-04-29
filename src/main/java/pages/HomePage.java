@@ -6,42 +6,39 @@ import org.openqa.selenium.interactions.Actions;
 
 import helper.Utility;
 
-public class HomePage {
 
+public class HomePage {
+	
 	WebDriver driver;
+	
+	By manage=By.xpath("//span[text()='Manage']");
+	By manageCourses=By.xpath("//a[text()=' Manage Courses']");
+	By delete=By.xpath("//td[text()='Selenium Using Java']//following::button");
+	By sideButton=By.xpath("(//*[name()='svg'])[4]");
+	By signOut=By.xpath("//button[text()='Sign out']");
 	
 	public HomePage(WebDriver driver)
 	{
 		this.driver=driver;
 	}
 	
-	By manage=By.xpath("//span[text()='Manage']");
-	By manageCourses=By.xpath("//a[contains(text(),'Manage Courses')]");
-	
-	By delete=By.xpath("//button[text()='Delete']");
-	By cart=By.xpath("//button[text()='Cart']");
-	By sideButton=By.xpath("(//*[name()='svg'])[4]");
-	By signOut=By.xpath("//button[text()='Sign out']");
-	
-
-	
 	public void manageCourses()
 	{
 		Actions act=new Actions(driver);
-		act.moveToElement(driver.findElement(manage)).build().perform();
+		act.moveToElement(driver.findElement(manage)).perform();
 		driver.findElement(manageCourses).click();
-		
 	}
-	
+
 	public void deleteCourse()
 	{
-		driver.findElement(delete).click();	
+		driver.findElement(delete).click();
 		Utility.waitForSeconds(2);
 	}
 	
 	public void signOut()
 	{
 		driver.findElement(sideButton).click();
+		Utility.waitForSeconds(1);
 		driver.findElement(signOut).click();
 	}
 }

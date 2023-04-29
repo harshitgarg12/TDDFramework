@@ -14,7 +14,7 @@ public class CustomDataProvider {
 	@DataProvider(name="courseDetails")
 	public Object[][] getCourseData()
 	{
-		Object[][] arr=ExcelReader.getDataFromSheet("courseDetails");
+		Object[][] arr=ExcelReader.getDataFromSheet("course");
 		return arr;
 }
 }

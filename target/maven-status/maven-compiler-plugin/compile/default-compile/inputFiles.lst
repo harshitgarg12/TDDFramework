@@ -2,10 +2,10 @@ C:\Users\intel\TDDFramework\src\main\java\listeners\ExtentManager.java
 C:\Users\intel\TDDFramework\src\main\java\listeners\ExtentTestNGITestListener.java
 C:\Users\intel\TDDFramework\src\main\java\base\BaseClass.java
 C:\Users\intel\TDDFramework\src\main\java\browserFactory\BrowserFactory.java
+C:\Users\intel\TDDFramework\src\main\java\pages\AddCoursePage.java
 C:\Users\intel\TDDFramework\src\main\java\dataProvider\CustomDataProvider.java
 C:\Users\intel\TDDFramework\src\main\java\pages\HomePage.java
 C:\Users\intel\TDDFramework\src\main\java\dataProvider\ExcelReader.java
-C:\Users\intel\TDDFramework\src\main\java\pages\AddCourse.java
 C:\Users\intel\TDDFramework\src\main\java\pages\LoginPage.java
 C:\Users\intel\TDDFramework\src\main\java\dataProvider\ConfigReader.java
 C:\Users\intel\TDDFramework\src\main\java\helper\Utility.java

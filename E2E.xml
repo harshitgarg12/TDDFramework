@@ -6,7 +6,7 @@
 	</listeners>
   <test thread-count="5" name="E2E_Testing">
     <classes>
-      <class name="testcases.E2ETesting"/>
+      <class name="testcases.E2ETest"/>
     </classes>
   </test> <!-- E2E_Testing -->
 </suite> <!-- AutomationUsingSelenium -->
