@@ -12,6 +12,8 @@ import pages.LoginPage;
 
 public class E2ETest extends BaseClass{
 	
+	int before;
+	int after;
 	//Login Test
 	@Test(dataProvider = "loginDetails", dataProviderClass =CustomDataProvider.class, priority = 1)
 	public void loginToApplication(String email, String password)
@@ -27,6 +29,7 @@ public class E2ETest extends BaseClass{
 	{
 		HomePage home=new HomePage(driver);
 		home.manageCourses();
+		Assert.assertTrue(driver.findElement(By.xpath("//button[text()='Activate Courses']")).isDisplayed());
 	}
 	
 	//Add New Course Test
@@ -35,6 +38,8 @@ public class E2ETest extends BaseClass{
 			String category, String startDate, String endDate, String startMonth, String endMonth)
 	{
 		AddCoursePage add=new AddCoursePage(driver);
+		 before=driver.findElements(By.xpath("//table//tr")).size();
+ 
 		add.addNewCourse(file,courseName,description,instructor,price,category,startDate,endDate,startMonth,endMonth);
 		Assert.assertTrue(driver.findElement(By.xpath("//td[text()='Selenium Using Java']")).isDisplayed());
 	}
@@ -46,7 +51,8 @@ public class E2ETest extends BaseClass{
 	{
 		HomePage home=new HomePage(driver);
 		home.deleteCourse();
-		//Assert.assertTrue(false);
+		 after=driver.findElements(By.xpath("//table//tr")).size();
+		Assert.assertEquals(after, before);
 	}
 	
 	
