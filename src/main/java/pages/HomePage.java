@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -31,7 +32,9 @@ public class HomePage {
 
 	public void deleteCourse()
 	{
-		driver.findElement(delete).click();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click()", driver.findElement(delete));
+		//driver.findElement(delete).click();
 		Utility.waitForSeconds(2);
 	}
 	

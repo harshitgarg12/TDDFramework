@@ -5,8 +5,8 @@
     <classes>
       <class name="testcases.E2ETest">
         <methods>
+          <include name="deleteCourse"/>
           <include name="setUpBrowser"/>
-          <include name="signOut"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- testcases.E2ETest -->
